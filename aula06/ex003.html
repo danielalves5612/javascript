@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 20pt Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número: ')) // Number.parseInt é uma forma de coversão para inteiro
+        var n2 = Number(window.prompt('Digite outro número: ')) // Number.parseFloat faz a mesma coisa para reais
+        var r = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${r}`) // o + pode servir para concatenar ou somar
+        // number() + number() soma os dois números
+        // string + string concatena os dois números
+    </script>
+</body>
+</html>
