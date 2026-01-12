@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imigração</title>
+</head>
+<body>
+    <h1>Verificador de Imigrantes</h1>
+    Informe o seu país de origem: <input type="text" name="verpaís" id="verpaís">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar() {
+            var verp = window.document.getElementById('verpaís')
+            var res = window.document.querySelector('div#res')
+            var país = verp.value
+            if (país == 'Brasil'){
+                res.innerHTML = 'Você é <strong>Brasileiro</strong>!'
+            }else {
+                res.innerHTML = 'Você é <strong>Estrangeiro!</strong>!'
+            }
+        }
+    </script>
+</body>
+</html>
