@@ -20,6 +20,15 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
+section img#foto {
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    width: 250px;
+    margin-top: 10px;
+}
+
 footer {
     color: white;
     text-align: center;
