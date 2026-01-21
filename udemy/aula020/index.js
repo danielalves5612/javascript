@@ -1,11 +1,28 @@
-const nome = document.getElementById('nome')
-const sobrenome = document.getElementById('sobrenome')
-let peso = document.getElementById('peso')
-let altura = document.getElementById('altura')
-let res = document.getElementById('res')
+function meuEscopo(){
+    const form = document.querySelector('#form')
+    const resultado = document.querySelector('#res')
 
-nome = nome.value
-sobrenome = sobrenome.value
-peso = Number(peso.value)
-altura = Number(altura.value)
-res.innerHTML = `${nome} ${sobrenome} ${peso} ${altura}`
+    const pessoas = []
+    
+
+    function recebeEventoForm (evento) {
+        evento.preventDefault()
+        const nome = form.querySelector('#nome')
+        const sobrenome = form.querySelector('#sobrenome')
+        const peso = form.querySelector('#peso')
+        const altura = form.querySelector('#altura')
+
+        const pessoa1 = {
+            nome: nome.value,
+            sobrenome: sobrenome.value,
+            peso: peso.value, 
+            altura: altura.value
+        }
+        pessoas.push(pessoa1)
+        console.log(pessoas)
+        resultado.innerHTML = `<p>${nome.value} ${sobrenome.value} ${peso.value} ${altura.value}</p>`
+    }
+
+    form.addEventListener('submit', recebeEventoForm)
+}
+meuEscopo()
