@@ -57,7 +57,7 @@ function selecionaTexto(){
     carregarTarefas(array)
 }
 
-function carregarTarefas(array){
+function carregarTarefas(){
     let guardaValor = localStorage.getItem('tarefas')
     if(guardaValor){
         guardaValor = JSON.parse(guardaValor)
