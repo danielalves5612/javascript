@@ -59,7 +59,15 @@ function selecionaTexto(){
 
 function carregarTarefas(array){
     let guardaValor = localStorage.getItem('tarefas')
-    JSON.parse(guardaValor)
+    if(guardaValor){
+        guardaValor = JSON.parse(guardaValor)
+        for(valor of guardaValor){
+            const li = criaLi()
+            li.innerHTML = valor
+            tarefas.appendChild(li)
+            criarBotaoApagar(li)
+        }
+    }
 }
 
 
